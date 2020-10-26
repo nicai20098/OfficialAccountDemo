@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- 每个build.xml 都至少包含一个project 否则会发生错误。在每个project元素下，可包含多个target元素
+		name标签 用于指定project元素的名称。
+		default标签 用于指定project默认执行时所执行的target的名称。
+		basedir标签 用于指定基路径的位置。该属性没有指定时，使用Ant的构件文件的附目录作为基准目录。
+-->
+<project name="ant_test" default="first_test" basedir=".">
+	<!-- 它为Ant的基本执行单元，它可以包含一个或多个具体的任务。多个target可以存在相互依赖关系
+	 	name标签 指定target元素的名称，这个属性在一个project元素中是唯一的。我们可以通过指定target元素的名称来指定某个target。
+		depends属性 用于描述target之间的依赖关系，若与多个target存在依赖关系时，
+					需要以“,”间隔。Ant会依照depends属性中target出现的顺序依次执行每个target。被依赖的target会先执行。
+		if属性 用于验证指定的属性是否存在，若不存在，所在target将不会被执行。
+		unless属性 该属性的功能与if属性的功能正好相反，它也用于验证指定的属性是否存在，若不存在，所在target将会被执行。
+		description属性 该属性是关于target功能的简短描述和说明。
+	 -->
+	<target name="first_test">
+		<echo message="first_test 日志打印 basedir--> ${basedir}"/>
+	</target>
+</project>
