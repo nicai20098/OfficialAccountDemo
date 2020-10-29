@@ -16,4 +16,33 @@
 	<target name="first_test">
 		<echo message="first_test 日志打印 basedir--> ${basedir}"/>
 	</target>
+
+	<!-- 执行targetB 由于依赖了targetA 故先执行targetA 而if条件是jdk版本 存在所以执行
+	紧接着执行unless 因为amigo不存在 所以执行对应targetB中的内容 -->
+	<target name="targetA" if="ant.java.version">
+		<echo message="Java Version : ${ant.java.version}"/>
+	</target>
+	<target name="targetB" depends="targetA" unless="amigo">
+		<description> a depends example!</description>
+		<echo message="targetB success!!!"/>
+	</target>
+
+	<!-- property元素
+		该元素可看作参量或者参数的定义，project的属性可以通过property元素来设定，也可在Ant之外设定。
+		若要在外部引入某文件，例如build.properties文件，可以通过如下内容将其引入：<property file=”build.properties”/>
+		property元素可用作task的属性值。在task中是通过将属性名放在“${”和“}”之间，并放在task属性值的位置来实现的。
+		Ant还提供了一些它自己的内置属性，如下：
+			basedir：project基目录的绝对路径，该属性在讲解project元素时有详细说明;
+			ant.file：buildfile的绝对路径
+			ant.version：Ant的版本，在本文中，值为1.7.1;
+			ant.project.name：当前指定的project的名字，即前文说到的project的name属性的值;
+			ant.java.version：Ant检测到的JDK的版本
+	-->
+	<property name="name" value="zs"/>
+	<property name="age" value="25"/>
+	<target name="property_test">
+		<echo message="property_tset ${name} -- ${age}" />
+	</target>
+
+
 </project>
