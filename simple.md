@@ -104,3 +104,10 @@
 ​			1.LeetCode https://leetcode-cn.com/
 ​			2.LintCode https://www.lintcode.com/
 ​			3.牛客网 https://www.nowcoder.com/
+
+### 四、idea插件
+
+​	1.lombok 代码简化神器
+​    2.Rainbow Bracket 括号彩色展示
+​    3.Translation 翻译插件
+​    4.Key promoter X 快捷键提示工具
