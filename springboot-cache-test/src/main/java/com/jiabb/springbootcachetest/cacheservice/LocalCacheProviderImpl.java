@@ -15,7 +15,7 @@ import java.util.function.Function;
  * @author jiabinbin
  * @date 2020/11/15 11:40 下午
  * @classname LocalCacheProviderImpl
- * @description 本地缓存提供者服务（Guavu Cache）
+ * @description 本地缓存提供者服务（Guava Cache）
  *  注意事项
  *      Guava Cache初始化容器时，支持缓存过期策略，类似FIFO、LRU和LFU等算法。
  *      expireAfterWrite：最后一次写入后的一段时间移出。
