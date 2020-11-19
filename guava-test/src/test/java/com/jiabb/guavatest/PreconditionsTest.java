@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -36,7 +37,7 @@ public class PreconditionsTest {
         try {
             checkNotNullWithMessage(null);
         }catch (Exception e){
-//            assertThat(e,is(NullPointerException.class));
+            assertThat(e.getClass(),is(NullPointerException.class));
             assertThat(e.getMessage(),equalTo("This list should not null~~~"));
         }
     }
