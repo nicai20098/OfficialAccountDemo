@@ -111,3 +111,5 @@
 ​    2.Rainbow Bracket 括号彩色展示
 ​    3.Translation 翻译插件
 ​    4.Key promoter X 快捷键提示工具
+​    5.CodeGlance 代码地图
+​    6.HighlightBracketPair 括号范围
