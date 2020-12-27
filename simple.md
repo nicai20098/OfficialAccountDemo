@@ -211,5 +211,84 @@ ro readonly     只读
 rw readwrite    读写
 ```
 
+### 六、python
+
+```python
+import os
+os.getcwd() 					#获取当前的工作目录，即当前python脚本工作的目录
+os.chdir('test') 			#改变当前脚本工作目录 相对于shell脚本
+os.rename('','')			#文件重命名
+os.remove('')					#删除文件
+os.rmdir('')					#删除空文件夹
+os.removedirs('')			#删除空文件夹
+os.mkdir('')					#创建一个文件夹
+os.listdir('')				#列出指定目录的所有文件和文件夹
+os.name								#nt --> windows posix --> Linux/Unix/MacOS
+os.environ						#获取环境配置
+os.environ.get('PATH')#获取指定环境配置
+os.sep 								#路径分隔符
+os.path.abspath(path) #获取path规范的绝对路径
+os.path.exists(path)	#如果path存在 则返回True
+os.path.isdir(path)		#如果path是一个存在的目录 返回True 否则返回False
+os.path.isfile(path)	#如果path是一个存在的文件 返回True 否则返回False
+os.path.splitext(path)#用来将指定路径进行分隔，可以获取文件和后缀名
+
+
+import sys
+sys.path							#模块的查找路径
+sys.argv							#传递给python脚本的命令行参数
+sys.exit(code)				#让程序以指定的退出码结束
+sys.stdin							#标准输入 可以通过它来获取用户的输入
+sys.stdout						#标准输出 可以通过修改它来改变默认输出
+sys.stderr						#错误输出 可以通过修改它来改变错误输出
+
+import math
+math.fabs(-100)				#取绝对值
+math.ceil(34.01)			#向上取整
+math.factorial(5)			#计算阶乘
+math.floor(34.98)			#向下取整
+math.pi								# 3.1415
+math.pow(2,10)				#2的10次方
+math.sin(math.pi/6)		#正弦值 余弦cos 正切tan
+
+import random
+random.random()							#生成[0，1)的随机浮点数
+random.uniform(20,30)				#生成[20，30]的随机浮点数
+random.randint(10,30)				#生成[10，30]的随机整数
+random.randrange(20,30)			#生成[20,30)的随机整数
+random.choice('abcdefg')		#从列表里随机取出一个元素
+random.sample('abcdefg',3)	#从列表里随机取出指定个数的元素
+
+import datetime
+datetime.date(2020,1,1)			#创建一个日期
+datetime.time(18,23,45)			#创建一个时间
+datetime.datetime.now()			#获取当前的日期时间
+datetime.datetime.now() + datetime.timedelta(3) #计算三天以后的日期时间
+
+import time
+time.time()													#获取从1970-01-01 00:00:00 UTC 到现在时间的秒数
+time,strftime("%Y-%m-%d %H:%M:%S")	#获取指定格式输出时间
+time.asctime()											
+time.ctime()
+time.sleep(10)											#让线程睡10s
+
+import calendar										  
+calendar.setfirstweekday(calendar.SUNDAY) #设置每周起始日期码 周一到周日对应0～6
+calendar.firstweekday()							#返回当前每周起始码 默认为0
+calendar.calendar(2020)							#生成2020年日历
+calendar.isleap(2020)								#判断是否是闰年
+calendar.leapdays(1996,2020)				#获取时间内有几个闰年
+calendar.month(2020,12)							#打印 指定月份的日历
+```
+
+七、礼金
+
+```shell
+村里：王全胜 王翔 李强 张骞 亚辉 赵志凯 黄群 赵鹏 卫振 韩康 尉润之 王绍军
+高中：李星华 贾伟 张飞 刘江涛 赵昌 张荣荣 刘文娟 刘力君 李青青 郭磊 张辉 李罡 路小飞 武晋龙 杨志文 赵培良 高坤
+大学：韩欣悦 常晓伟 赵春林 杜沐华 韩铁 赵雁荣 孙越飞 姚怡成 杨文宇 李艳鹏 刘帅 荆有亮
+工作：李珍渊 王鹏莎 赵雅卉 卢绛梓
+```
+
 
 
